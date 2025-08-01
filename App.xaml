@@ -1,0 +1,24 @@
+﻿<Application x:Class="PhoneLinesApp.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:conv="clr-namespace:PhoneLinesApp.UI.Converters"
+             Startup="OnStartup">
+    <Application.Resources>
+        <x:Array Type="sys:String" x:Key="StatusOptions"
+                 xmlns:sys="clr-namespace:System;assembly=mscorlib">
+            <sys:String>All</sys:String>
+            <sys:String>Active</sys:String>
+            <sys:String>Inactive</sys:String>
+        </x:Array>
+
+        <x:Array Type="sys:String" x:Key="LineTypes"
+                 xmlns:sys="clr-namespace:System;assembly=mscorlib">
+            <sys:String>فاتورة</sys:String>
+            <sys:String>فليكس</sys:String>
+            <sys:String>ريد</sys:String>
+        </x:Array>
+
+        <conv:ActivationWarningConverter x:Key="ActivationWarningConverter"/>
+        <conv:InverseBoolConverter       x:Key="InverseBoolConverter"/>
+    </Application.Resources>
+</Application>
